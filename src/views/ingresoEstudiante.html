@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar estudiante</title>
+    <link rel="stylesheet" href="../../node_modules/bulma/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/50b64d4e61.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/ingresoEstudiante.css">
+</head>
+
+<body>
+    <div class="container is-8 is-offset-2 mt-3 is-fixed-top-desktop">
+        <h1 class="title is-5 has-text-centered">Ingresar Estudiante</h1>
+    </div>
+<div id="estudianteForm" class="container is-10-tablet is-offset-2-tablet py-1 px-2 is-mobile">
+    <form>
+        <div class="field">
+            <label for="name" class="label">Nombre</label>
+            <div class="control">
+                <input id="nombreEstudiante" type="text" class="input is-success is-rounded is-focused" placeholder="Name"
+                    required>
+            </div>
+        </div>
+        <div class="field">
+            <label for="lastname" class="label">Apellido</label>
+            <div class="control">
+                <input id="apellidoEstudiante" type="text" class="input is-rounded is-success" placeholder="LastName" required>
+            </div>
+        </div>
+        <div class="field">
+            <label for="lastname" class="label">Sexo</label>
+            <div class="control">
+                <label class="radio">
+                    <input id="sexoMasculino" type="radio" name="sex" value="masculino">
+                    Masculino
+                </label>
+                <label class="radio">
+                    <input id="sexoFemenino" type="radio" name="sex" value="femenino">
+                    Femenino
+                </label>
+            </div>
+        </div>
+        <div class="field">
+            <label for="department" class="label">Departamento</label>
+            <div class="control">
+                <input id="departamento" type="text" class="input is-rounded is-success" placeholder="department"
+                    required>
+            </div>
+        </div>
+        <div class="field">
+            <label for="city" class="label">ciudad</label>
+            <div class="control">
+                <input id="ciudad" type="text" class="input is-rounded is-success" placeholder="city" required>
+            </div>
+        </div>
+        <div class="field">
+            <label for="celphone" class="label">celular</label>
+            <div class="control">
+                <input id="celular" type="tel" class="input is-rounded is-success" placeholder="city" required>
+            </div>
+        </div>
+        <div class="field">
+            <label for="faculty" class="label">facultad</label>
+            <div class="control">
+                <input id="facultad" type="text" class="input is-rounded is-success" placeholder="faculty" required>
+            </div>
+        </div>
+        <div class="field">
+            <label for="career" class="label">carrera</label>
+            <div class="control">
+                <input id="carrera" type="text" class="input is-rounded is-success" placeholder="career" required>
+            </div>
+        </div>
+        <div class="field">
+            <label for="anio" class="label">año de estudio</label>
+            <div class="select is-rounded is-success">
+                <select id="anioEstudio">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+    </form>
+</div>
+<footer class="colums">
+    <div class="field is-grouped">
+        <div class="control column is-4 is-offset-2">
+            <button id="btnEnviar" type="submit"
+                class="button has-text-weight-bold is-fullwidth is-link is-success is-outlined">Submit</button>
+        </div>
+        <div class="control column is-4">
+            <button id="btnCancel" type="reset"
+                class="button has-text-weight-bold is-fullwidth is-link is-danger is-outlined">Cancel</button>
+        </div>
+    </div>
+</footer>
+<script src="./ingresoEstudiante.js"></script>
+</body>
+
+</html>

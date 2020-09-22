@@ -1,0 +1,15 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+#encuesta_container {
+    height: 72vh;
+    overflow-y: scroll;
+}
+
+@media only screen and (max-height: 600px) {
+    #encuesta_container {
+        height: 60vh;
+        overflow-y: scroll;
+    }
+}

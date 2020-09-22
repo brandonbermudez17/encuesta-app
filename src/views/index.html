@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>encuesta app</title>
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../../node_modules/bulma/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/50b64d4e61.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="level is-mobile px-2 pt-2 mt-0">
+      <div class="level-left">
+        <div class="level-item has-text-centered">
+          <h1 class="title">Aplicacion de Encuesta.</h1>
+        </div>
+      </div>
+      <div class="level-right">
+        <div class="level-item">
+          <button id="btnCrearEncuesta" class="button is-primary">Crear Encuesta</button>
+        </div>
+        <div class="level-item">
+          <button id="btnIngresoEstudiante" class="button is-link">Ingresar Estudiante</button>
+        </div>
+      </div>
+    </nav>
+    <div class="container is-fluid">
+      <div class="field">
+        <div class="control">      
+          <input id="searchEncuesta" class="input is-rounded is-info" type="text" placeholder="Buscar encuesta...">
+        </div>
+      </div>
+    </div>
+
+    <div class="container is-fluid mt-1">
+      <div class="control">
+        <label class="radio">
+          <input type="radio" name="answer" checked>
+          encuestador
+        </label>
+        <label class="radio">
+          <input type="radio" name="answer">
+          numero
+        </label>
+        <label class="radio">
+          <input type="radio" name="answer">
+          estudiante
+        </label>
+      </div>
+    </div>
+
+    <div id="encuesta_container" class="container is-fluid mt-2">
+    </div>
+
+    <script src="./principal.js"></script>
+  </body>
+</html>

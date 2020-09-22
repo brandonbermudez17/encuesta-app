@@ -1,0 +1,8 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+#containerQuestions {
+    height: 80vh;
+    overflow-y: scroll;
+}

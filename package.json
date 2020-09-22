@@ -1,0 +1,17 @@
+{
+  "name": "encuesta-app",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^10.1.2",
+    "electron-reload": "^1.5.0"
+  },
+  "dependencies": {
+    "bulma": "^0.9.0",
+    "pg": "^8.3.3"
+  }
+}
