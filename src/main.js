@@ -2,7 +2,7 @@ require("electron-reload")(__dirname);
 
 const { app, BrowserWindow, ipcMain, remote } = require("electron");
 const main = require("electron-reload");
-const { getEncuesta, getRespuestas } = require("./database");
+const { getEncuesta, getRespuestas,setEstudiante } = require("./database");
 const { menu } = require("./menu");
 
 let mainWindow;
@@ -69,6 +69,13 @@ ipcMain.handle('getRespuestas', async (event) => {
   const res = await getRespuestas()
   console.log(res)
   return res
+})
+
+ipcMain.on('insertar_estudiante',(event,data) => {
+  setEstudiante(data)
+  .then(() => {
+    console.log('estudiante insertado');
+  })
 })
 
 ipcMain.on('debugear', (event, data) => {

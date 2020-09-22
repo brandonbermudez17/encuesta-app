@@ -13,7 +13,7 @@ const departamento = document.getElementById('departamento');
 const ciudad = document.getElementById('ciudad');
 const celular = document.getElementById('celular');
 const facultad = document.getElementById('facultad');
-const carrera = document.getElementById('carrera');
+const carnet = document.getElementById('carnet');
 const anioEstudioSelect = document.getElementById('anioEstudio')
 
 btnCancel.addEventListener('click', e => {
@@ -39,10 +39,10 @@ btnEnviar.addEventListener('click',e => {
     estudiante.ciudad = ciudad.value;
     estudiante.celular = celular.value;
     estudiante.facultad = facultad.value;
-    estudiante.carrera = carrera.value;
+    estudiante.carnet = carnet.value;
     estudiante.anioEstudio = anioEstudioSelect.options[anioEstudioSelect.selectedIndex].value;
     estudiante.anioEstudio = parseInt(estudiante.anioEstudio, 10)
 
-    ipcRenderer.send('debugear', estudiante);
+    ipcRenderer.send('insertar_estudiante', estudiante);
 })
 

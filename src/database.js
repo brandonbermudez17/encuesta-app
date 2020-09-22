@@ -48,8 +48,12 @@ const getRespuestas = async () => {
 }
 
 const setEstudiante = async (data) => {
+    const {nombre,apellido,carnet,sexo,departamento,ciudad,celular,facultad,anioEstudio} = data;
     const conn = getConnection()
-    conn.query()
+    await conn.query(
+        'call insert_estudiante($1,$2,$3,$4,$5,$6,$7,$8,$9)',
+        [nombre,apellido,carnet,departamento,ciudad,facultad,anioEstudio,sexo,celular]
+    )
 }
 
 module.exports = {
@@ -57,5 +61,6 @@ module.exports = {
     closeDB,
     fetchEncuestas,
     getEncuesta,
-    getRespuestas
+    getRespuestas,
+    setEstudiante
 }
